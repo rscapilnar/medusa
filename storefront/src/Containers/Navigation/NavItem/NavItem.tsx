@@ -1,0 +1,21 @@
+import { Link } from "react-router-dom";
+import { MenuItem } from "../../../Types";
+
+// This could potentially take a ReactNode, though perhaps it should be opinionated and not accept arbitrary JSX
+const NavItem = ({
+  item,
+  onItemClick,
+}: {
+  item: MenuItem;
+  onItemClick: () => void;
+}) => {
+  return (
+    <Link to={item.route} onClick={onItemClick}>
+      <div className="m-2 font-serif text-2xl font-semibold text-center text-white border-b-4 w-fit border-b-transparent hover:border-b-violet-500">
+        {item.display}
+      </div>
+    </Link>
+  );
+};
+
+export default NavItem;

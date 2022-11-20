@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Public Sans", "sans-serif"],
+      serif: ["Playfair Display", "serif"],
     },
     extend: {},
   },
