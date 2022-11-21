@@ -1,9 +1,21 @@
+import { MedusaProvider } from "medusa-react";
+import { QueryClient } from "react-query";
 import { Outlet } from "react-router-dom";
 import { Navigation } from "./Containers";
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      staleTime: 30000,
+      retry: 1,
+    },
+  },
+});
+
 function App() {
   return (
-    <div className="flex w-full h-screen bg-slate-50">
+    <div className="flex w-full h-full bg-slate-50">
       <Navigation />
       <div className="flex flex-col w-full h-full px-20 py-6">
         <div className="flex justify-center">
@@ -12,7 +24,12 @@ function App() {
           </h1>
         </div>
         <div className="p-4">
-          <Outlet />
+          <MedusaProvider
+            baseUrl="http://localhost:9000"
+            queryClientProviderProps={{ client: queryClient }}
+          >
+            <Outlet />
+          </MedusaProvider>
         </div>
       </div>
     </div>

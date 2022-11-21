@@ -1,5 +1,5 @@
 import App from "../App";
-import { ErrorPage } from "../Containers";
+import { ErrorPage, Storefront } from "../Containers";
 
 const ROUTES = [
   {
@@ -13,7 +13,7 @@ const ROUTES = [
       },
       {
         path: "/store",
-        element: <div>storefront</div>,
+        element: <Storefront />,
       },
       {
         path: "/contact",

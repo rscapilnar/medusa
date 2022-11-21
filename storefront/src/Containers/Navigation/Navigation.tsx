@@ -7,7 +7,7 @@ import NavItem from "./NavItem";
 const Navigation = () => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
 
-  const stateClasses = navOpen ? "w-1/5 bg-neutral-900" : "w-16 ";
+  const stateClasses = navOpen ? "xs:w-3/5 w-1/5 bg-neutral-900" : "w-16 ";
 
   return (
     <div
