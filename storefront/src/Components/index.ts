@@ -10,3 +10,4 @@ export { default as ProductInfo } from "./ProductInfo";
 export { default as QuantitySelector } from "./QuantitySelector";
 export { default as AddToCartButton } from "./AddToCartButton";
 export { default as ProductVariantSelector } from "./ProductVariantSelector";
+export { default as Button } from "./Button";

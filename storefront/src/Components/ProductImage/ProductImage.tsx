@@ -6,7 +6,7 @@ const ProductImage = () => {
   const { product } = useProductDetail();
   const [selectedImage, setSelectedImage] = useState<Image>(product.images[0]);
   return (
-    <div className={`flex w-full h-fit flex-col`}>
+    <div className={`flex w-full flex-col h-fit`}>
       <img
         src={selectedImage.url}
         className="object-cover object-center w-full h-full aspect-square"

@@ -90,7 +90,7 @@ const Product = () => {
   if (!product) return <div>Error overlay here</div>;
 
   return (
-    <div className="grid grid-cols-1 gap-16 p-8 md:grid-cols-2 md:p-16">
+    <div className="grid grid-cols-1 gap-16 p-8 lg:grid-cols-2 lg:p-16">
       <ProductDetailContext.Provider
         value={{
           product,
