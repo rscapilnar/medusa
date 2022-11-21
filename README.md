@@ -14,6 +14,8 @@ The single product view page allows a user to see all the product images, select
 
 Would suggest running the store backend in the repo, as I've created 2 collections and assigned the items to them, for my implementation.
 
+For the storefront, a `yarn install` and `yarn start` should suffice, under Node 16.
+
 ## Development Considerations
 
 **Time spent**: Probably about 6 hours of active work
