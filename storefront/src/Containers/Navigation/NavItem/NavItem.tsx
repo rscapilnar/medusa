@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { MenuItem } from "../../../Types";
 
-// This could potentially take a ReactNode, though perhaps it should be opinionated and not accept arbitrary JSX
 const NavItem = ({
   item,
   onItemClick,

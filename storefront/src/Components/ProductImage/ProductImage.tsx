@@ -1,4 +1,4 @@
-import { Image, Product } from "@medusajs/medusa";
+import { Image } from "@medusajs/medusa";
 import { useState } from "react";
 import { useProductDetail } from "../../Containers/Product/Product";
 

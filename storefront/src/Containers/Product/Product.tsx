@@ -19,10 +19,6 @@ import {
 } from "../../Components";
 import { useConfig } from "../WithConfig/WithConfig";
 
-/*
-  Context here keeping track of product, variant and other selections
-*/
-
 type IProductDetailContext = {
   product: IProduct;
   loading: boolean;
@@ -79,8 +75,6 @@ const Product = () => {
   useEffect(() => {
     if (product && !activeVariant) setActiveVariant(product.variants[0]);
   }, [product, activeVariant]);
-
-  useEffect(() => {}, [activeVariant]);
 
   const onQuantityChange = useCallback((quantity: number) => {
     setQuantity(quantity);
