@@ -7,11 +7,13 @@ import NavItem from "./NavItem";
 const Navigation = () => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
 
-  const stateClasses = navOpen ? "xs:w-3/5 w-1/5 bg-neutral-900" : "w-16 ";
+  const stateClasses = navOpen
+    ? "2xl:w-1/5 md:w-2/5 w-4/5 bg-neutral-900"
+    : "w-16 ";
 
   return (
     <div
-      className={`flex flex-col h-screen ${stateClasses} transition-all absolute py-8`}
+      className={`flex flex-col h-full ${stateClasses} transition-all fixed py-8 z-50 top-0 left-0`}
     >
       <NavToggleButton
         isNavOpen={navOpen}
