@@ -6,10 +6,10 @@ const ProductImage = () => {
   const { product } = useProductDetail();
   const [selectedImage, setSelectedImage] = useState<Image>(product.images[0]);
   return (
-    <div className={`flex w-full flex-col h-fit`}>
+    <div className={`flex w-full flex-col max-h-min items-center`}>
       <img
         src={selectedImage.url}
-        className="object-cover object-center w-full h-full aspect-square"
+        className="object-cover object-center w-full h-full max-w-3xl aspect-square"
         alt={product.description ?? ""}
       />
       <div className="grid grid-cols-4 gap-5 mt-10">
