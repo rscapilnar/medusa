@@ -1,5 +1,11 @@
 import App from "../App";
-import { ErrorPage, Storefront } from "../Containers";
+import {
+  ErrorPage,
+  Homepage,
+  Product,
+  Storefront,
+  Contact,
+} from "../Containers";
 
 const ROUTES = [
   {
@@ -9,7 +15,7 @@ const ROUTES = [
     children: [
       {
         path: "/",
-        element: <div>homepage with hero</div>,
+        element: <Homepage />,
       },
       {
         path: "/store",
@@ -17,7 +23,11 @@ const ROUTES = [
       },
       {
         path: "/contact",
-        element: <div>contact info</div>,
+        element: <Contact />,
+      },
+      {
+        path: "/product/:productId",
+        element: <Product />,
       },
     ],
   },

@@ -1,7 +1,7 @@
 import { MedusaProvider } from "medusa-react";
 import { QueryClient } from "react-query";
-import { Outlet } from "react-router-dom";
-import { Navigation } from "./Containers";
+import { Outlet, useNavigation } from "react-router-dom";
+import { Navigation, WithConfig } from "./Containers";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -14,6 +14,8 @@ const queryClient = new QueryClient({
 });
 
 function App() {
+  const navigation = useNavigation();
+
   return (
     <div className="flex w-full h-full bg-slate-50">
       <Navigation />
@@ -23,12 +25,18 @@ function App() {
             medusa <span className="font-normal">store</span>
           </h1>
         </div>
-        <div className="p-4">
+        <div
+          className={`p-4 ${
+            navigation.state === "loading" ? "opacity-50" : "opacity-100"
+          }`}
+        >
           <MedusaProvider
             baseUrl="http://localhost:9000"
             queryClientProviderProps={{ client: queryClient }}
           >
-            <Outlet />
+            <WithConfig>
+              <Outlet />
+            </WithConfig>
           </MedusaProvider>
         </div>
       </div>
